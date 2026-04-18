@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary:   #fdf9f3;
+    --bg-secondary: #f9f0e0;
+    --ink-dark:     #21160d;
+    --ink-mid:      #5e4229;
+    --ink-light:    #9a7352;
+    --accent:       #d4623a;
+    --accent-light: #e8845c;
+    --teal:         #3bb8b0;
+    --border:       rgba(60, 40, 20, 0.12);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    @apply font-body text-ink-800 bg-parchment-50;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  }
+
+  * { @apply border-ink-100; }
+}
+
+@layer components {
+  /* ── Shimmer skeleton ───────────────────────────── */
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      #f2dfc0 25%,
+      #f9f0e0 50%,
+      #f2dfc0 75%
+    );
+    background-size: 700px 100%;
+    @apply animate-shimmer rounded;
+  }
+
+  /* ── Book card ──────────────────────────────────── */
+  .book-card {
+    @apply bg-parchment-50 rounded-xl shadow-card border border-ink-100
+           transition-all duration-300 ease-out cursor-pointer;
+  }
+  .book-card:hover {
+    @apply shadow-book-hover -translate-y-1;
+  }
+
+  /* ── Pill badge ─────────────────────────────────── */
+  .genre-pill {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-body font-medium
+           bg-parchment-200 text-ink-600 border border-ink-200;
+  }
+
+  /* ── Sidebar nav link ───────────────────────────── */
+  .nav-link {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-lg text-ink-600 font-body font-medium
+           transition-all duration-200 hover:bg-parchment-100 hover:text-ink-800;
+  }
+  .nav-link.active {
+    @apply bg-accent-500 text-parchment-50 hover:bg-accent-600 hover:text-parchment-50;
+  }
+
+  /* ── Primary button ─────────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-accent-500 text-parchment-50
+           font-body font-medium text-sm transition-all duration-200
+           hover:bg-accent-600 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-ink-200
+           text-ink-700 font-body font-medium text-sm transition-all duration-200
+           hover:bg-parchment-100 active:scale-95 disabled:opacity-50;
+  }
+
+  /* ── Input ──────────────────────────────────────── */
+  .input-field {
+    @apply w-full px-4 py-2.5 rounded-lg border border-ink-200 bg-white
+           font-body text-sm text-ink-800 placeholder-ink-300
+           focus:outline-none focus:ring-2 focus:ring-accent-400 focus:border-transparent
+           transition-all duration-200;
+  }
+
+  /* ── Section heading ────────────────────────────── */
+  .section-title {
+    @apply font-display text-2xl font-semibold text-ink-800 leading-tight;
+  }
+
+  /* ── Divider ────────────────────────────────────── */
+  .divider {
+    @apply border-t border-ink-100 my-6;
+  }
+
+  /* ── Insight card ───────────────────────────────── */
+  .insight-card {
+    @apply rounded-xl p-5 border;
+  }
+
+  /* ── Chat bubble ────────────────────────────────── */
+  .chat-user {
+    @apply self-end max-w-[80%] bg-accent-500 text-parchment-50
+           px-4 py-3 rounded-2xl rounded-br-sm font-body text-sm leading-relaxed;
+  }
+  .chat-assistant {
+    @apply self-start max-w-[85%] bg-white border border-ink-100
+           px-4 py-3 rounded-2xl rounded-bl-sm font-body text-sm leading-relaxed text-ink-800 shadow-card;
+  }
+}
+
+/* Star rating colours */
+.star-filled  { color: #d4a017; }
+.star-empty   { color: #d0bba5; }
+
+/* Scrollbar */
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d0bba5; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #b89878; }
