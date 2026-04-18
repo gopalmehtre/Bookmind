@@ -4,20 +4,6 @@
 
 ---
 
-## 🖼️ Screenshots
-
-> _After running the app, add 3–4 screenshots here by replacing the placeholders below._
-
-| Dashboard | Library |
-|-----------|---------|
-| ![Dashboard](screenshots/dashboard.png) | ![Library](screenshots/library.png) |
-
-| Book Detail | Ask AI |
-|-------------|--------|
-| ![Detail](screenshots/book-detail.png) | ![Ask](screenshots/ask-ai.png) |
-
----
-
 ## 🏗️ Architecture Overview
 
 ```
@@ -372,6 +358,6 @@ book-intelligence/
 
 ---
 
-## 📄 License
+## Author
 
-MIT
+- Gopal Mehtre.

@@ -130,6 +130,46 @@ SAMPLE_INSIGHTS = {
             "Best suited for readers who can handle dark, thought-provoking narratives."
         ),
     },
+    "To Kill a Mockingbird": {
+        "summary": (
+            "Harper Lee's Pulitzer Prize-winning novel is a profound exploration of racial injustice "
+            "and moral courage in the American South. Seen through the innocent eyes of young Scout "
+            "Finch, it remains one of the most powerful indictments of prejudice ever written."
+        ),
+        "genre": "Fiction",
+        "sentiment": (
+            "The tone balances warmth and innocence with deep moral outrage. The coming-of-age "
+            "narrative carries an undercurrent of sorrow and injustice, yet ultimately affirms "
+            "human decency. Suitable for readers who appreciate emotionally rich literary fiction."
+        ),
+    },
+    "Dune": {
+        "summary": (
+            "Frank Herbert's epic science fiction saga follows Paul Atreides on the desert planet "
+            "Arrakis, the sole source of the universe's most valuable substance. Blending politics, "
+            "religion, ecology, and prophecy, Dune is widely regarded as the greatest science "
+            "fiction novel ever written."
+        ),
+        "genre": "Science Fiction",
+        "sentiment": (
+            "Grand, mythic, and contemplative in tone. The novel builds a sense of vast destiny "
+            "and ecological dread, with moments of intense action and political intrigue. "
+            "Best suited for readers who enjoy world-building and philosophical depth."
+        ),
+    },
+    "The Name of the Wind": {
+        "summary": (
+            "Patrick Rothfuss's debut novel follows Kvothe — legendary wizard, musician, and "
+            "warrior — as he narrates his extraordinary life story. Celebrated for its beautiful "
+            "prose and intricate magic system, it is the first volume of the Kingkiller Chronicle."
+        ),
+        "genre": "Fantasy",
+        "sentiment": (
+            "Lyrical, immersive, and bittersweet. The framing narrative carries a melancholy weight "
+            "of lost greatness, while the inner story brims with youthful ambition and wonder. "
+            "Ideal for readers who love character-driven fantasy with exceptional writing."
+        ),
+    },
 }
 
 

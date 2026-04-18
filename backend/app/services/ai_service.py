@@ -87,7 +87,7 @@ def _call_gemini(system_prompt: str, user_prompt: str, max_tokens: int) -> str:
         api_key=settings.GEMINI_API_KEY,
     )
     resp = client.chat.completions.create(
-        model="gemini-2.5-flash",
+        model="gemini-1.5-flash",
         max_tokens=max_tokens,
         messages=[
             {"role": "system", "content": system_prompt},
